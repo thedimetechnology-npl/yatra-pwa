@@ -57,20 +57,18 @@ export default function Home() {
           <button
             className="w-full py-3.5 rounded-full bg-[#0f172a] text-white font-semibold text-[15px] shadow-lg active:scale-[0.98] transition-transform"
             onClick={() => {
-              // visual feedback only - no backend
               const btn = document.getElementById("scanBtn");
               if (btn) {
-                btn.textContent = "Recorded! ✓";
-                setTimeout(() => (btn.textContent = "Scan Recorded ✅"), 1200);
+                btn.textContent = "Recorded!";
+                setTimeout(() => (btn.textContent = "Scan Recorded"), 1200);
               }
             }}
             id="scanBtn"
           >
-            Scan Recorded ✅
+            Scan Recorded
           </button>
 
           <div className="inline-flex items-center gap-2 bg-white border border-amber-200 px-4 py-2 rounded-full shadow-sm">
-            <span className="text-amber-500">🔥</span>
             <span className="text-sm font-bold text-slate-800">Streak: 1 day</span>
           </div>
         </div>
