@@ -73,25 +73,6 @@ export default function Home() {
             <span className="text-amber-500">🔥</span>
             <span className="text-sm font-bold text-slate-800">Streak: 1 day</span>
           </div>
-
-          <p className="text-[11px] text-slate-400 mt-2">No backend • No login • Just front-end</p>
-
-          {/* Optional: tap name to personalize - minimal, no backend */}
-          <button
-            onClick={() => {
-              const v = prompt("Enter your name:", name);
-              if (v && v.trim()) {
-                setName(v.trim());
-                localStorage.setItem("yatra_name", v.trim());
-                const url = new URL(window.location.href);
-                url.searchParams.set("name", v.trim());
-                window.history.replaceState({}, "", url.toString());
-              }
-            }}
-            className="text-[11px] text-slate-400 underline decoration-dotted underline-offset-4 mt-1"
-          >
-            change name
-          </button>
         </div>
       </div>
     </div>
