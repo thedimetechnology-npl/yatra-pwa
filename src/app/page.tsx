@@ -1,10 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import namasteData from "../../public/namaste.json";
 
-// dynamic import to avoid SSR issue
-const Lottie: any = dynamic(() => import("lottie-react") as any, { ssr: false });
+const ClientLottie = dynamic(() => import("@/components/ClientLottie"), { ssr: false, loading: () => <div className="w-[280px] h-[320px] animate-pulse bg-amber-50 rounded-2xl" /> });
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
@@ -39,7 +37,7 @@ export default function Home() {
         >
           <div className="flex flex-col items-center px-6">
             <div className="w-[280px] h-[320px] md:w-[320px] md:h-[360px]">
-              <Lottie animationData={namasteData} loop autoplay style={{ width: "100%", height: "100%" }} />
+              <ClientLottie />
             </div>
             <p className="mt-2 text-center text-[15px] font-medium tracking-wide text-[#4a2c0a] leading-relaxed">
               Dhanyavaad, aapka safar shubh ho
