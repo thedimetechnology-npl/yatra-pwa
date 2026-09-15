@@ -1,0 +1,12 @@
+{
+  "name": "Yatra Rewards — QR Commute",
+  "short_name": "Yatra",
+  "description": "QR-based commute rewards — scan, streaks, WhatsApp, Bhashini",
+  "start_url": "/scan",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    { "src": "/next.svg", "sizes": "192x192", "type": "image/svg+xml" }
+  ]
+}
